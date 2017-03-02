@@ -1,4 +1,4 @@
-# vim-denite-gists
+# vim-denite-command-history
 [![wercker status](https://app.wercker.com/status/4957015a009e5636c40102655df63c8b/s/master "wercker status")](https://app.wercker.com/project/byKey/4957015a009e5636c40102655df63c8b)
 
 `vim-denite-command-history` is a source for [denite.nvim](https://github.com/Shougo/denite.nvim).
