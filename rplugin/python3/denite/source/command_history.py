@@ -42,7 +42,7 @@ class Source(Base):
 
     def _filter_candidates(self, histories):
         return [
-            history forhistory in histories
+            history for history in histories
             if not self._is_ignore_command(history[1])
         ]
 
