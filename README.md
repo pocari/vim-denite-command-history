@@ -30,6 +30,12 @@ For [dein.vim](https://github.com/Shougo/dein.vim)
 |execute(default)  | execute selected command |
 |edit_and_execute  | edit selected command and execute |
 
+if you want change default action
+
+```vim
+:Denite command_history -default-action=edit_and_execute
+```
+
 ## custom#vars
 example
 
