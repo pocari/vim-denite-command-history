@@ -30,7 +30,7 @@ For [dein.vim](https://github.com/Shougo/dein.vim)
 |execute(default)  | execute selected command |
 |edit_and_execute  | edit selected command and execute |
 
-if you want change default action
+if you want to change default action
 
 ```vim
 :Denite command_history -default-action=edit_and_execute
