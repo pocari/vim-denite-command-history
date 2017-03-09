@@ -21,20 +21,19 @@ class Source(Base):
         }
 
     def gather_candidates(self, context):
-        histories = [
-            x for x in self.vim.call('command_history#util#histories')[1:]
-            if len(x) > 1
-        ]
-        histories = self._filter_candidates(histories)
+        histories = self._get_histories()
         if histories:
             max_len = len(histories[0][0])
             return [self._convert(r, max_len) for r in histories if len(r) > 1]
 
     def _get_histories(self):
-        histories = self.vim.call('command_history#util#histories')
+        histories = [
+            x for x in self.vim.call('command_history#util#histories')[1:]
+            if len(x) > 1
+        ]
         if self.vars['ignore_command_regexp']:
             histories = list(filter(
-                lambda command: not self._is_ignore_command(command),
+                lambda history: not self._is_ignore_command(history[1]),
                 histories
             ))
         return histories
