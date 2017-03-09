@@ -31,12 +31,18 @@ class Source(Base):
             x for x in self.vim.call('command_history#util#histories')[1:]
             if len(x) > 1
         ]
+        histories = self._remove_duplicate_entry(histories)
         if self.vars['ignore_command_regexp']:
             histories = list(filter(
                 lambda history: not self._is_ignore_command(history[1]),
                 histories
             ))
         return histories
+
+    def _remove_duplicate_entry(self, seq):
+        seen = set()
+        seen_add = seen.add
+        return [ x for x in seq if x[1].strip() not in seen and not seen_add(x[1].strip())]
 
     def _filter_candidates(self, histories):
         return [
