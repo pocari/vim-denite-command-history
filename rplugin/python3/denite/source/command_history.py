@@ -17,8 +17,7 @@ class Source(Base):
         self.name = 'command_history'
         self.kind = Kind(vim)
         self.vars = {
-            'ignore_command_regexp': [
-            ]
+            'ignore_command_regexp': []
         }
 
     def gather_candidates(self, context):
