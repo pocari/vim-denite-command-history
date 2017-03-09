@@ -42,7 +42,10 @@ class Source(Base):
     def _remove_duplicate_entry(self, seq):
         seen = set()
         seen_add = seen.add
-        return [ x for x in seq if x[1].strip() not in seen and not seen_add(x[1].strip())]
+        return [
+            x for x in seq
+            if x[1].strip() not in seen and not seen_add(x[1].strip())
+        ]
 
     def _filter_candidates(self, histories):
         return [
