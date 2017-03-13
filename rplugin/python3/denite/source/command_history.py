@@ -77,6 +77,7 @@ class Kind(Command):
         target = context['targets'][0]
         edited = util.input(self.vim, context,
                             "command > ",
-                            target['action__command'])
+                            target['action__command'],
+                            'command')
         if edited:
             self.vim.call('denite#util#execute_command', edited)
