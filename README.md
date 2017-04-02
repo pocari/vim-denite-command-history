@@ -1,6 +1,6 @@
 # Deprecated
 
-**This plugin had been integrated to `Denite`.**
+**This plugin has been integrated into `Denite`.**
 
 **You can use `Denite command_history` without this plugin.**
 
