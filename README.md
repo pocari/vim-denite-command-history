@@ -2,7 +2,7 @@
 
 **This plugin has been integrated into `Denite`.**
 
-**You can use `Denite command_history` without this plugin.**
+**You can use `:Denite command_history` without this plugin.**
 
 # vim-denite-command-history
 [![wercker status](https://app.wercker.com/status/4957015a009e5636c40102655df63c8b/s/master "wercker status")](https://app.wercker.com/project/byKey/4957015a009e5636c40102655df63c8b)
